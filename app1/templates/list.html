@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+<br><br>
+
+{% for i in response %}
+<ul>
+	<li>{{i.type}}</li>
+	<li>{{i.actor.display_login}}</li>
+	<li><img src="{{i.actor.avatar_url}}"></li>
+	<li>{{i.repo.name}}</li>
+	<br>
+</ul>
+{% endfor %}
+
+
+
+
+{% endblock content %}
